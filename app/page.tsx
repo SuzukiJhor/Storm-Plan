@@ -33,57 +33,57 @@ export default async function Home() {
     return (
       <div className="flex flex-col h-screen w-full justify-center items-center">
         <Tabs defaultValue="account" className="w-[400px]">
-        <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="account">Login</TabsTrigger>
-          <TabsTrigger value="password">Criar Conta</TabsTrigger>
-        </TabsList>
-        <TabsContent value="account">
-          <Card>
-            <CardHeader>
-              <CardTitle>Login</CardTitle>
-              <CardDescription>
-                Bem Vindo, Entre na sua Conta por aqui
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-2">
-              <div className="space-y-1">
-                <Label htmlFor="name">Nome</Label>
-                <Input id="name" defaultValue="Pedro Duarte" />
-              </div>
-              <div className="space-y-1">
-                <Label htmlFor="username">Sobrenome</Label>
-                <Input id="username" defaultValue="@peduarte" />
-              </div>
-            </CardContent>
-            <CardFooter>
-              <Button>Login</Button>
-            </CardFooter>
-          </Card>
-        </TabsContent>
-        <TabsContent value="password">
-          <Card>
-            <CardHeader>
-              <CardTitle>Criar Conta</CardTitle>
-              <CardDescription>
-                Bem Vindo, Crie sua conta aqui
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-2">
-              <div className="space-y-1">
-                <Label htmlFor="current">Login</Label>
-                <Input id="current"/>
-              </div>
-              <div className="space-y-1">
-                <Label htmlFor="new">Senha</Label>
-                <Input id="new" type="password" />
-              </div>
-            </CardContent>
-            <CardFooter>
-              <Button>Criar Conta</Button>
-            </CardFooter>
-          </Card>
-        </TabsContent>
-      </Tabs>
+          <TabsList className="grid w-full grid-cols-2">
+            <TabsTrigger value="login">Login</TabsTrigger>
+            <TabsTrigger value="password">Criar Conta</TabsTrigger>
+          </TabsList>
+          <TabsContent value="account">
+            <Card>
+              <CardHeader>
+                <CardTitle>Login</CardTitle>
+                <CardDescription>
+                  Bem Vindo, Entre na sua Conta por aqui
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                <div className="space-y-1">
+                  <Label htmlFor="email">E-mail</Label>
+                  <Input id="email"/>
+                </div>
+                <div className="space-y-1">
+                  <Label htmlFor="password">Senha</Label>
+                  <Input id="password"/>
+                </div>
+              </CardContent>
+              <CardFooter>
+                <Button>Login</Button>
+              </CardFooter>
+            </Card>
+          </TabsContent>
+          <TabsContent value="password">
+            <Card>
+              <CardHeader>
+                <CardTitle>Criar Conta</CardTitle>
+                <CardDescription>
+                  Bem Vindo, Crie sua conta aqui
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                <div className="space-y-1">
+                  <Label htmlFor="email">Email</Label>
+                  <Input id="email"/>
+                </div>
+                <div className="space-y-1">
+                  <Label htmlFor="password">Senha</Label>
+                  <Input id="password" type="password" />
+                </div>
+              </CardContent>
+              <CardFooter>
+                <Button>Criar Conta</Button>
+              </CardFooter>
+            </Card>
+          </TabsContent>
+        </Tabs>
       </div>
     )
 }
